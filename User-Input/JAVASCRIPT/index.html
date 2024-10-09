@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Input</title>
 </head>
+
 <body>
     
     <!--<button id="myButton" >Click me!</button>
@@ -16,7 +17,8 @@
     </script>
 -->
 
-    <input type="text" name="" id="searchBox"/>
+   <!--
+ <input type="text" name="" id="searchBox"/>
     <script>
         const searchBox = document.querySelector('#searchBox');
 
@@ -24,5 +26,34 @@
             console.log('event triggered')
         })
     </script>
+-->
+
+    <h1>TO DO LIST...</h1>
+    <ul>   
+        <li>Buy Groc</li>
+        <li>Do laun</li>
+        <li>Clean House</li>
+    </ul>
+
+    <script>
+        const listItems = document.querySelectorAll('li');
+
+        listItems.forEach(item => {
+            item.addEventListener('click', () => {
+                item.classList.toggle('completed')
+            })
+        });
+
+
+
+
+    </script>
+
+<style>
+    .completed{
+        text-decoration: line-through;
+        color: gray;
+    }
+</style>
 </body>
 </html>
