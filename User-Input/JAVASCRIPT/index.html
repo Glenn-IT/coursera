@@ -57,7 +57,33 @@
 </style>
 -->  
 
+<h1>My favorite Food</h1>
 
+<ul id="foodlist">
+    <li>Pizza</li>
+    <li>Sushi</li>
+</ul>
+
+<button id="removeButoon">Remove sushi</button>
+<button id="addButton">Add tacos</butoon>
+
+<script>
+    const addButton = document.querySelector('#addButton')
+    const removeButoon = document.querySelector('#removeButton')
+    const foodlist = document.querySelector('#foodlist')
+
+    addButton.addEventListener('click', () => {
+            const newListItem = document.createElement('li')
+            const newListItemText = document.createTextNode('Tacos')
+
+
+
+            newListItem.append(newListItemText)
+            foodlist.appendChild(newListItem)
+    })
+
+
+</script>
 
 
 </body>
