@@ -64,7 +64,7 @@
     <li>Sushi</li>
 </ul>
 
-<button id="removeButoon">Remove sushi</button>
+<button id="removeButton">Remove sushi</button>
 <button id="addButton">Add tacos</butoon>
 
 <script>
@@ -80,6 +80,12 @@
 
             newListItem.append(newListItemText)
             foodlist.appendChild(newListItem)
+    })
+
+    removeButton.addEventListener('click', () => {
+           const sushi = document.querySelector('li:nth-child(2)')
+
+           foodlist.removeChild(sushi)
     })
 
 
